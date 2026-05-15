@@ -19,8 +19,17 @@ function Tasks() {
         };
 
         fetchTasks();
-    }, [API_URL]);
+    }, []);
+    const handleDelete = async (id) => {
+        if (!window.confirm("Are you sure you want to delete this task?")) return;
 
+        try {
+            await axios.delete(`${API_URL}/tasks/${id}`);
+            setTasks(prev => prev.filter(task => task.id !== id));
+        } catch (err) {
+            console.error(err);
+        }
+    }
     const formatDate = (dateString) => {
         const date = new Date(dateString);
 
@@ -52,13 +61,13 @@ function Tasks() {
 
                     <div className="flex flex-col gap-2">
                         <button
-                            onClick={() => setSelectedTask(task)}
+                            onClick={() => setSelectedTask(task.id)}
                             className="text-xs cursor-pointer px-2 py-1 rounded-md bg-gray-100 hover:bg-gray-200 text-gray-700 transition"
                         >
                             Edit
                         </button>
 
-                        <button className="text-xs px-2 cursor-pointer py-1 rounded-md bg-red-500 hover:bg-red-600 text-white transition">
+                        <button onClick={() => handleDelete(task.id)} className="text-xs px-2 cursor-pointer py-1 rounded-md bg-red-500 hover:bg-red-600 text-white transition">
                             Delete
                         </button>
                     </div>
