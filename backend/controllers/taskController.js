@@ -21,7 +21,7 @@ const getTasks = async (req, res) => {
         const result = await pool.query(
             'SELECT * FROM tasks'
         );
-        res.json(result.rows[0])
+        res.json(result.rows)
     } catch (error) {
         res.status(500).json({ error: error.message });
     }

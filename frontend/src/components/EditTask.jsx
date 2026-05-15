@@ -6,7 +6,7 @@ function EditTask({onClose}) {
                     <h2 className="text-xl font-semibold text-gray-800">Edit Task</h2>
                     <button
                         onClick={onClose}
-                        className="text-gray-400 hover:text-gray-600"
+                        className="text-gray-400 hover:text-gray-600 cursor-pointer"
                     >
                         X
                     </button>
@@ -26,10 +26,10 @@ function EditTask({onClose}) {
 
                     <input
                         type="datetime-local"
-                        className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
                     />
 
-                    <select className="w-full p-2 border rounded-md">
+                    <select className="w-full p-2 border rounded-md cursor-pointer">
                         <option>Incomplete</option>
                         <option>Pending</option>
                         <option>Complete</option>
@@ -39,13 +39,13 @@ function EditTask({onClose}) {
                         <button
                             type="button"
                             onClick={onClose}
-                            className="px-3 py-1 rounded-md bg-gray-200 hover:bg-gray-300"
+                            className="px-3 py-1 rounded-md bg-gray-200 hover:bg-gray-300 cursor-pointer"
                         >
                             Cancel
                         </button>
                         <button
                             type="button"
-                            className="px-3 py-1 rounded-md bg-blue-600 text-white hover:bg-blue-700"
+                            className="px-3 py-1 rounded-md bg-blue-600 text-white hover:bg-blue-700 cursor-pointer"
                         >
                             Edit
                         </button>

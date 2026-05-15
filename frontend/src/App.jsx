@@ -12,7 +12,7 @@ function App() {
           <h1 className="text-3xl font-bold text-gray-800">Tasks</h1>
           <button
             onClick={() => setShowCreateForm(true)}
-            className="bg-red-500 text-white px-3 py-2 rounded-lg shadow hover:bg-red-700 transition"
+            className="bg-red-500 text-white px-3 py-2 rounded-lg shadow hover:bg-red-700 transition cursor-pointer"
           >
             Add Task
           </button>

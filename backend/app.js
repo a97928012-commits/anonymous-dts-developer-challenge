@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+const cors = require('cors')
 const express = require("express");
 const pool = require('./db');
 
@@ -14,5 +15,5 @@ const taskRouter = require('./routes/taskRouter')
 app.use('/tasks', taskRouter);
 
 app.listen(port,() =>{
-    console.log(`Server listening oon port ${port}`);
+    console.log(`Server listening on port ${port}`);
 })
