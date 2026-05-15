@@ -61,7 +61,7 @@ function Tasks() {
 
                     <div className="flex flex-col gap-2">
                         <button
-                            onClick={() => setSelectedTask(task.id)}
+                            onClick={() => setSelectedTask(task)}
                             className="text-xs cursor-pointer px-2 py-1 rounded-md bg-gray-100 hover:bg-gray-200 text-gray-700 transition"
                         >
                             Edit
