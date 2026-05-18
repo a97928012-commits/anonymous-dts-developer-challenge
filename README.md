@@ -162,16 +162,6 @@ Deletes a task by its ID.
 |-----------|-----------|---------------|
 | `id`      | `integer` | The task's ID |
 
-**Response** `200 OK`
-```json
-{ "message": "Task deleted successfully" }
-```
-
-**Error Response** `404 Not Found`
-```json
-{ "error": "Task not found" }
-```
-
 ---
 
 ## ✅ Features
